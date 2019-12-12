@@ -1,10 +1,5 @@
 - script:
-  name: hw9.3(caulobacter).ipynb
+  name: hw9.3(Caulobacter).ipynb
   desc: >
     The complete notebook with analysis of our caulobacter study. Note - You must install the caulobacter_utils package here for the code to work: https://github.com/DoKu88/caulobacter_utils
-- script:
-  name: script2.py
-  desc: >
-    Yet another script that does something-or-other.
-
 
