@@ -1,20 +1,19 @@
 - dataset:
   storage: local
-  name: Sampling statistics from some fancy experiment
+  name: Processed segmentations for bacterium 2
   filetype: ".csv"
-  link: dataset1.csv
-  filesize: "24 MB"
+  link: hw5.2_bacterium_2_areas.csv
 
 - dataset:
   storage: local
-  name: Table of measurements from an old-school study for comparison
+  name: Processed segmentations for bacterium 1
   filetype: ".csv"
-  link: dataset2.csv
+  link: hw5.2_bacterium_1_areas.csv
 
 - dataset:
   storage: remote 
-  link: "https://data.caltech.edu"
-  DOI:  "10.1.1./journal.0000"
-  name: "Anonymized data from web scraping"
+  link: "https://s3.amazonaws.com/bebi103.caltech.edu/data/iyer_biswas_et_al.zip"
+  #DOI:  "10.1.1./journal.0000"
+  name: "Caulobacter crescentus growth over time"
   filetype: .zip 
-  filesize: 2 gb
+  filesize: 600 mb

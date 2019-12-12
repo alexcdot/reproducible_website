@@ -9,23 +9,22 @@
 # of the `page01_people.md` file.
 # ##############################################################################
 - author:
-  name: Dr. Osophila
-  link: "https://en.wikipedia.org/wiki/Drosophila"
-  title: Postdoctoral Scholar
-  img: dr_osophila.jpg
-  institute: Bicoid Institute of Development
-  other_info:
-     Email Address: "flyguy@university.edu"
+  name: Alexander Cui
+  #link: "https://en.wikipedia.org/wiki/Drosophila"
+  title: Undergraduate
+  #img: dr_osophila.jpg
+  institute: Caltech
+  #other_info:
+  #   Email Address: "flyguy@university.edu"
 - author:
-  name: Dr. Melanie O'Gaster
-  link: "https://en.wikipedia.org/wiki/Drosophila_melanogaster"
-  title: Postdoctoral Scholar
-  img: melanogaster.jpg
-  institute: French Flag Research Institute
-  other_info:
-    Current Location: Apple Juice Plates, Inc
-
+  name: Marcus Dominguez Kuhne
+  #link: "https://en.wikipedia.org/wiki/Drosophila"
+  title: Undergraduate
+  #img: dr_osophila.jpg
+  institute: Caltech
 - author:
-  name: Sally Monella
-  title: Research Technician
-  institute: French Flag Research Institute
+  name: Sharne Sun
+  #link: "https://en.wikipedia.org/wiki/Drosophila"
+  title: Undergraduate
+  #img: dr_osophila.jpg
+  institute: Caltech

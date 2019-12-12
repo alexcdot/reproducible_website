@@ -1,68 +1,17 @@
-# Reproducible Research Website Template
-This repository is a bare-bones template website for publishing of your work as
-an interactive website. It's tailored for easy inclusion of data files, plots,
-and interactive figures. It is a heavily modified form of the Jekyll template
-[Flexible Jekyll](https://artemsheludko.github.io/flexible-jekyll/) by
-[`@artemsheludko`](https://github.com/artemsheludko). It is originally published
-under the [GNU General Public License
-v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) and is distributed here
-under the same license terms.
+We are going to study the growth and division of Caulobacter crescentus over time. The lab of Norbert Scherer at the University of Chicago acquired these data and published the work in PNAS.
 
-This repository is designed to be hosted as a website on GitHub using the
-[GitHub Pages]() hosting service. This service is based on the Ruby framework
-[Jekyll]() which is tailored for blog management. I've made several
-modifications to the structure to be amenable for scientific publications. 
+*Note: You must install the caulobacter_utils package here for the code to work: https://github.com/DoKu88/caulobacter_utils*
 
-## How Do I Use This?
-Full documentation of how to use this repository as either a standalone website
-or as a branch in another repository can be found on the [GitHub Wiki page](https://github.com/gchure/reproducible_website/wiki)
-for this repository. 
+The clever experimental set-up allows imaging of single dividing cells in conditions that are identical through time. This is accomplished by taking advantage of a unique morphological feature of Caulobacter. The mother cell is adherent to the a surface through its stalk. Upon division, one of the daughter cells does not have a stalk and is mobile. The system is part of a microfluidic device that gives a constant flow. So, every time a mother cell divides, the un-stalked daughter cell gets washed away. In such a way, the dividing cells are never in a crowded environment and the buffer is always fresh. This also allows for easier segmentation.
 
-## Software requirements 
-To deploy locally, you must have a [Ruby development environment]() installed as
-well as [Jekyll](). You can install Jekyll via 
+They were kindly provided by Charlie Wright and Sri Iyer-Biswas in the Scherer lab. The frame rate is 1 frame per minute. The interpixel spacing is 0.052 µm. All images were acquired at 24 ∘C.
 
-```
-gem install jekyll bundler
-```
+Specifically, for the Caulobacter crescentus, we are going to investigate the growth behavior. For this, we are going to propose two mathematical models and see which one more accurately represents how the Caulobacter crescentus grows. These models are:
+1. Linear Model: $$a(t) = a_0(1+kt)$$
+2. Exponential Model: $$a(t) = a_0 e^{kt}$$
 
-Once you have Jekyll installed, you can install of the Ruby requirements for
-this website by running the following in the command line from the template directory:
+Where $$a(t)$$ area at time t, $$a_0$$ area at time 0, and k is a constant. 
 
-```
-bundle install
-```
+We are going to use area to approximate the volume/size of our bacteria since we know that the size is proportional to the area, so these models do transfer. Additionally, we have that the experiment set up allows us to have easy segmentation, which we can get the area of the bacteria from. 
 
-The build and preview the website locally, execute the following:
-```
-bundle exec jekyll serve --watch
-```
-
-This will build the website and serve it up at the address:
-[http://127.0.0.1:4000](http://127.0.0.1:4000).
-
-
-## License
-This template is a heavily modified version of [Flexible
-Jekyll](https://artemsheludko.github.io/flexible-jekyll/) under a GNU General
-Public License Version 3.0. This template is provided with the same license.
-All writing, logo, and other creative works provided with this template are
-issued with a [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
-
-
-```
-Copyright (C) 2019  Griffin Chure 
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-```
+Note that for this problem, we define a growth event as a time period during which a bacterium grows before dividing. After a division, a new growth event begins.

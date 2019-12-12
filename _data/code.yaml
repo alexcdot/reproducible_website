@@ -1,8 +1,7 @@
 - script:
-  name: script1.py
+  name: hw9.3(caulobacter).ipynb
   desc: >
-    Super fancy script which calcualate some complicated stuff with
-    well-documented code.
+    The complete notebook with analysis of our caulobacter study. Note - You must install the caulobacter_utils package here for the code to work: https://github.com/DoKu88/caulobacter_utils
 - script:
   name: script2.py
   desc: >

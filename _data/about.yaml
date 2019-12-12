@@ -10,51 +10,30 @@
 # The content below will appear 
 
 title: >
-  Your Paper Title Here
+  The growth and division of Caulobacter crescentus over time.
 authors: >
-  Author 1, Author 2, Author 3, Author 4
+  Marcus Dominguez Kuhne, Alexander Cui, Sharne Sun
 Abstract: >
-  This is a general purpose website template for conveying your data, code, and
-  overall scientific story to the general public! See the
-  [GitHub](https://github.com/gchure/reproducible_website) for the actual code
-  used to generate this website, along with lengthy documentation about how to use
-  it. This is meant to be used in tandem with the [GitHub repository template for
-  reproducible research](https://github.com/gchure/reproducible_research). The
-  Rest of this website is filled with dummy text (my favorite, [Hiptser
-  Ipsum](https://hipsum.co/)) for demonstrative purposes. It can even include
-  math like
+  We are going to study the growth and division of Caulobacter crescentus over time. The lab of Norbert Scherer at the University of Chicago acquired these data and published the work in PNAS.
+  The clever experimental set-up allows imaging of single dividing cells in conditions that are identical through time. This is accomplished by taking advantage of a unique morphological feature of Caulobacter. The mother cell is adherent to the a surface through its stalk. Upon division, one of the daughter cells does not have a stalk and is mobile. The system is part of a microfluidic device that gives a constant flow. So, every time a mother cell divides, the un-stalked daughter cell gets washed away. In such a way, the dividing cells are never in a crowded environment and the buffer is always fresh. This also allows for easier segmentation.
+  They were kindly provided by Charlie Wright and Sri Iyer-Biswas in the Scherer lab. The frame rate is 1 frame per minute. The interpixel spacing is 0.052 µm. All images were acquired at 24 ∘C.
+  Specifically, for the Caulobacter crescentus, we are going to investigate the growth behavior. For this, we are going to propose two mathematical models and see which one more accurately represents how the Caulobacter crescentus grows. These models are:
+  1. Linear Model: $$ a(t) = a_0(1+kt)$$
+  2. Exponential Model: $$ a(t) = a_0 e^{kt}$$
 
+  Where $$a(t)$$ area at time t, $$a_0$$ area at time 0, and k is a constant. 
 
-  $$S = k_b\ln \Omega. \tag{1}$$
+  We are going to use area to approximate the volume/size of our bacteria since we know that the size is proportional to the area, so these models do transfer. Additionally, we have that the experiment set up allows us to have easy segmentation, which we can get the area of the bacteria from. 
 
+  Note that for this problem, we define a growth event as a time period during which a bacterium grows before dividing. After a division, a new growth event begins.
 
-
-  Your abstract goes here.
-  Lorem ipsum dolor amet post-ironic aliquip next level vaporware, dolore
-  yuccie trust fund etsy officia blue bottle distillery ad. Raw denim swag
-  selvage wolf, direct trade air plant reprehenderit you probably haven’t heard
-  of them. Aute craft beer cray, pariatur la croix lumbersexual chillwave
-  fashion axe pug adipisicing woke banh mi. Hammock asymmetrical sustainable
-  keffiyeh biodiesel. Banjo trust fund leggings direct trade. Cronut plaid
-  shaman whatever, disrupt ad tofu minim pug dolore forage franzen glossier.
-  Small batch humblebrag ut, artisan health goth edison bulb voluptate lorem
-  dolore chillwave mumblecore iPhone craft beer ex. Enim fingerstache kale
-  chips, VHS succulents butcher meggings woke lo-fi mustache chicharrones chia
-  id consectetur. Gochujang taiyaki incididunt, chartreuse tumblr poutine banjo
-  culpa helvetica eu master cleanse migas umami. Dreamcatcher aliquip hexagon
-  disrupt deep v ugh, banjo truffaut distillery flannel la croix copper mug. Af
-  8-bit tattooed asymmetrical mumblecore swag direct trade iPhone disrupt
-  exercitation mixtape.
 Summary:  >
-  A short summary of your work goes here. Think "significance statement".
-  Nisi bushwick seitan et authentic aute, laboris blog sed in wayfarers lyft
-  plaid ut. Id aesthetic venmo, palo santo aliqua photo booth blue bottle.
-  Meditation non copper mug lomo glossier kombucha. Cred laboris meditation
-  poke sriracha street art letterpress food truck master cleanse adipisicing.
-  Hashtag affogato chambray vaporware subway tile, kogi helvetica ea tacos sint
-  brooklyn. Williamsburg waistcoat raclette seitan glossier messenger bag
-  dolore ramps, flannel magna nisi hot chicken elit pariatur kale chips.
+  To accomplish this problem there are three main steps:
+  1. Look at our given data and determine how to segment the bacteria
+  2. Label the growth of bacteria by growth event
+  3. Using data for growth given a growth event, see which growth model better fits the data
+
+  Based on our graphical anaylsis and AIC metrics, exponential growth is a better model for the Caulobacter growth.
+
 Acknowledgments: > 
-  Who helped you? Share the love! Valeria Rivera, Destiny Roach, Alberto 
-  Fernandez, Trenton Rowland, Sherlyn Frederick, Mallory Irwin, Jazmyn Cohen,
-  Jaylene Page, Kelsey Hayes, Sonny Wilson, Roy Taylor, Ryleigh Daugherty.
+  Thanks to Justin Bois and his team of TAs for making our analysis more rigorous.
